@@ -41,7 +41,7 @@ public class przyklad1v2 {
         uzytkownik2.setAdresKorespondencyjny(adresZameldowania);
 
         session.persist(uzytkownik2);
-        session.flush();
+        session.getTransaction().commit();
         session.close();
     }
 }

@@ -39,7 +39,7 @@ public class przyklad1 {
         uzytkownik2.setAdresZameldowania(adresZameldowania);
 
         session.persist(uzytkownik2);
-        session.flush();
+        session.getTransaction().commit();
         session.close();
     }
 }

@@ -34,7 +34,7 @@ public class przyklad2 {
         adres2.setIdModyfikujacego(15);
         adres2.setDataModyfikacji(Date.valueOf(LocalDate.now()));
         session.persist(adres2);
-        session.flush();
+        session.getTransaction().commit();
         session.close();
     }
 }
